@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66" height="66" viewBox="0 0 66 66">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_81" data-name="Rectangle 81" width="66" height="66" transform="translate(-1307 682)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="icon-3" transform="translate(1307 -682)" clip-path="url(#clip-path)">
+    <g id="icon-3-2" data-name="icon-3" transform="translate(-1290 693)">
+      <g id="Group_16" data-name="Group 16" transform="translate(0)">
+        <path id="Path_97" data-name="Path 97" d="M1362.022,1593.7h-31.7l3.129-5.334h25.442Z" transform="translate(-1330.321 -1559.346)" fill="#5267f7"/>
+        <path id="Path_98" data-name="Path 98" d="M1362.235,1521.235v12.072h-30.343v-12.072h8.89v3.566h1.836v-3.566h8.889v3.566h1.836v-3.566Z" transform="translate(-1331.213 -1521.235)" fill="#dfe2f4"/>
+        <path id="Path_99" data-name="Path 99" d="M1362.235,1549.161l-3.267,5.221h-23.808l-3.267-5.221Z" transform="translate(-1331.213 -1537.088)" fill="#5267f7"/>
+        <path id="Path_100" data-name="Path 100" d="M1363,1572.966H1337.56l.817-11.728h23.808Z" transform="translate(-1334.431 -1543.945)" fill="#dfe2f4"/>
+        <rect id="Rectangle_18" data-name="Rectangle 18" width="31.701" height="9.182" transform="translate(0 34.355)" fill="#dfe2f4"/>
+      </g>
+    </g>
+  </g>
+</svg>
