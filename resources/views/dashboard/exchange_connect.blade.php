@@ -100,8 +100,19 @@
                                               <ul class="custom-control-group g-3 align-center flex-wrap">
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" checked name="exchange_based" id="exchange_based" value="Binance">
-                                                          <label class="custom-control-label" for="reg-enable">Binance</label>
+                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_binance" value="Binance">
+                                                          <label class="custom-control-label" for="exchange_binance">Binance</label>
+                                                      </div>&nbsp;&nbsp;
+
+
+                                                      <div class="custom-control custom-radio">
+                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_bybit" value="Bybit">
+                                                          <label class="custom-control-label" for="exchange_bybit">Bybit</label>
+                                                          </div>&nbsp;&nbsp;
+                                                          
+                                                          <div class="custom-control custom-radio">
+                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_ftx" value="FTX">
+                                                          <label class="custom-control-label" for="exchange_ftx">FTX</label>
                                                       </div>
                                                   </li>
                                               </ul>
