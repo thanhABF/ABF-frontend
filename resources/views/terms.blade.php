@@ -291,7 +291,7 @@
                     </div>
 
                     <div class="col-md-3 pt-3 pt-md-0">
-                        <p class="card-p2 "><span class="p1 footer-color medium">About Us</span><br>Lorem Ipsum Text would be pasted Lorem Ipsum Text would be pasted Lorem Ipsum Text would be pasted</p>
+                        <p class="card-p2 "><span class="p1 footer-color medium">About Us</span><br>Making cryptocurrency more accessible for everyone, day by day.</p>
                     </div>
                     <div class="col-md-3 pt-3 pt-md-0">
                         <p class="card-p2 "><span class="p1 footer-color medium">Feel free to contact us</span><br><a href="mailto:hello@coinpilot.com" style="text-decoration:none; color:white">hello@coinpilot.com</a></p>
