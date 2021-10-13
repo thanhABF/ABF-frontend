@@ -31,16 +31,16 @@
                     <!--  -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item pt-2">
-                            <a class="nav-link text-white text-center" href="#features">About Us</a>
+                            <a class="nav-link text-white text-center" href="https://coinpilot.com/#features">About Us</a>
                         </li>
                         <li class="nav-item pt-2">
-                            <a class="nav-link text-white text-center" href="#investor">Investor</a>
+                            <a class="nav-link text-white text-center" href="https://coinpilot.com/#results">Results</a>
                         </li>
                         <li class="nav-item pt-2">
-                            <a class="nav-link  text-white text-center" href="#trader">Traders</a>
+                            <a class="nav-link  text-white text-center" href="https://coinpilot.com/#discord">Discord</a>
                         </li>
                         <li class="nav-item pt-2">
-                            <a class="nav-link  text-white text-center" href="#support">Support</a>
+                            <a class="nav-link  text-white text-center" href="https://coinpilot.com/#support">Support</a>
                         </li>
                     </ul>
                     <!--  -->
