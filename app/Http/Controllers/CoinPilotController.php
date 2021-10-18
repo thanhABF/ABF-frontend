@@ -160,6 +160,18 @@ class CoinPilotController extends Controller
       return redirect()->route('index');
     }
 
+    // this is matt taylor's custom referral link
+    public function getstarted() {
+      $user = User::where('email','=','charlieskogen@gmail.com')->select('id')->limit(1)->get();
+      if(isset($user[0]->id)) {
+        $invited_by_user_id = $user[0]->id;
+        if(!empty($invited_by_user_id)) {
+          Cookie::queue('referral_id', $invited_by_user_id, 43200);
+        }
+      }
+      return redirect()->route('index');
+    }
+
     public function referral_detect2() {
       $referral_id = Cookie::get('referral_id');
       echo $referral_id;
