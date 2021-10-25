@@ -215,18 +215,20 @@ class CoinPilotController extends Controller
         $profit_chart = "[";
         $date_chart = "[";
         $netprofitpercent_chart = "[";
+        $_profit = 0;
         for ($x = 0; $x <= 30; $x++) {
           $firstDate = Carbon::parse($firstDate)->addDay(1)->format('Y-m-d');
-          $netProfit = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote],['CloseDate','LIKE','%'.$firstDate.'%']])->sum('NetProfit');
-          $netProfit = round($netProfit, 8);
-          $profit_chart = $profit_chart.strval($netProfit).",";
+          $profit = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote],['CloseDate','LIKE','%'.$firstDate.'%']])->sum('NetProfit');
+          $profit = round($profit + $_profit, 8);
+          $profit_chart = $profit_chart.strval($profit).",";
+          $_profit = $profit;
 
           $invested = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote],['CloseDate','LIKE','%'.$firstDate.'%']])->sum('Invested');
           $invested = round((float)$invested, 8);
           if((float)$invested == 0) {
             $NetProfitPercent = 0;
           } else {
-            $NetProfitPercent = ((((float)$invested + (float)$netProfit) * 100) / (float)$invested) - 100;
+            $NetProfitPercent = ((((float)$invested + (float)$profit) * 100) / (float)$invested) - 100;
             $NetProfitPercent = round((float)$NetProfitPercent, 2);
           }
 
@@ -235,6 +237,9 @@ class CoinPilotController extends Controller
           $tempDay = Carbon::parse($firstDate)->format('d M');
           $date_chart = $date_chart.'"'.$tempDay.'",';
         }
+
+        $return = $profit + $invested;
+
         $profit_chart = substr($profit_chart,0,-1);
         $profit_chart = $profit_chart."]";
 
