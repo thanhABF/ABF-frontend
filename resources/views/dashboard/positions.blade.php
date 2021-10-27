@@ -140,17 +140,21 @@
                                                               <span>{{ $position['Fees'] }}</span>
                                                           </td>
                                                           <td class="nk-tb-col">
-                                                            @if((float)$position['NetProfit'] >= 0)
+                                                            @if((float)$position['NetProfit'] > 0)
                                                               <span class="tb-status text-success">{{ $position['NetProfit'] }}</span>
-                                                            @else
+                                                            @elseif((float)$position['NetProfitPercent'] < 0)
                                                               <span class="tb-status text-danger">{{ $position['NetProfit'] }}</span>
+                                                            @else
+                                                              <span>{{ $position['NetProfit'] }}</span>
                                                             @endif
                                                           </td>
                                                           <td class="nk-tb-col">
-                                                            @if((float)$position['NetProfitPercent'] >= 0)
+                                                            @if((float)$position['NetProfitPercent'] > 0)
                                                               <span class="tb-status text-success">{{ $position['NetProfitPercent'] }}%</span>
-                                                            @else
+                                                            @elseif((float)$position['NetProfitPercent'] < 0)
                                                               <span class="tb-status text-danger">{{ $position['NetProfitPercent'] }}%</span>
+                                                            @else
+                                                              <span>{{ $position['NetProfitPercent'] }}%</span>
                                                             @endif
                                                           </td>
                                                       </tr><!-- .nk-tb-item  -->
