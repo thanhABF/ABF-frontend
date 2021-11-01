@@ -60,7 +60,7 @@
                                     </a>
                                     <div class="accordion-body collapse" id="accordion-item-4" data-parent="#accordion" >
                                         <div class="accordion-inner">
-                                            <p>Taking your assets is not possible. You provide us with a Binance API key without the permissions for withdrawing. All we can do with an API key is submit trades.</p>
+                                            <p>Taking your assets is not possible. You provide us with an API key without the permissions for withdrawing. All we can do with an API key is submit trades.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                                     </a>
                                     <div class="accordion-body collapse" id="accordion-item-6" data-parent="#accordion" >
                                         <div class="accordion-inner">
-                                            <p>Binance.US is not supported. If you are from the U.S and would like to take advantage of our platform, you can use a VPN to create your account. It's highly recommended that you use the same VPN/VPS to avoid issues withdrawing from different IP addresses.</p>
+                                            <p>If you are from the U.S. or another country that disallows Binance, we are now offering Kucoin as an accepted exchange!</p>
                                         </div>
                                     </div>
                                 </div>

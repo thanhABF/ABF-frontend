@@ -22,7 +22,7 @@
                                   <div class="card-inner card-inner-xl">
                                       <article class="entry">
 
-                                          <p>To get started using Coinpilot, you will need a Binance.com account, verified or unverified. If you are a member of the U.S, you will need a VPN to access Binance.</p>
+                                          <p>Welcome to Coinpilot! Currently we are offering Binance.com and KuCoin exchanges.</p>
                                           <p>Binance sign-up link: <a href="https://www.binance.com/en/register?ref=153831969" target="_blank">https://www.binance.com/</a></p>
                                           <p>Note: Depositing on Coinpilot is for paying invoices, not for trading!</p>
                                           <h5>Once you have a Binance account, create an API key</h5>

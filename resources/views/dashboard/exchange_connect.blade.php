@@ -1,6 +1,40 @@
 @extends('dashboard.layouts.app')
 @section('content')
 <!-- content @s -->
+
+<style type="text/css">
+  .hide {
+  display: none;
+}
+.tooltip {
+  display: inline;
+  position: relative;
+  opacity:1 !important;
+}
+.tooltip:hover:after{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: #444;
+  border-radius: 8px;
+  color: #fff;
+  content: attr(title);
+  margin: -82px auto 0;
+  font-size: 16px;
+  padding: 13px;
+  width: 220px;
+}
+.tooltip:hover:before{
+  border: solid;
+  border-color: #444 transparent;
+  border-width: 12px 6px 0 6px;
+  content: "";
+  left: 45%;
+  bottom: 30px;
+  position: absolute;
+}
+</style>
 <div class="nk-content ">
     <div class="container-fluid">
         <div class="nk-content-inner">
@@ -89,6 +123,7 @@
                                               </div>
                                           </div>
                                       </div>
+                                   
                                       <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
@@ -100,48 +135,66 @@
                                               <ul class="custom-control-group g-3 align-center flex-wrap">
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_binance" value="Binance">
-                                                          <label class="custom-control-label" for="exchange_binance">Binance</label>
+                                                        <!-- <input style="margin-top: 4px;margin-right: 5px;" type="radio" name="tab" value="igotnone" onclick="show1();" />
+Binance --->
+<input type="radio" class="custom-control-input" name="tab" id="exchange_dca_yes" checked value="yes" onclick="show1();">
+                                                          <label class="custom-control-label" for="exchange_dca_yes">Binance</label>
                                                       </div>&nbsp;&nbsp;
 
 
+
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_bybit" value="Bybit">
-                                                          <label class="custom-control-label" for="exchange_bybit">Bybit</label>
+                                                         <!-- <input style="margin-top: 4px;margin-right: 5px;" type="radio" name="tab" value="igottwo" onclick="show2();" />
+Kukoin --->
+                            <input type="radio" class="custom-control-input" name="tab" id="exchange_dca_no" value="no" onclick="show2();">
+                                                          <label class="custom-control-label" for="exchange_dca_no">KuCoin</label>
                                                           </div>&nbsp;&nbsp;
-                                                          
-                                                          <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_ftx" value="FTX">
-                                                          <label class="custom-control-label" for="exchange_ftx">FTX</label>
-                                                      </div>
                                                   </li>
                                               </ul>
                                           </div>
                                       </div>
-                                      <div class="row g-3 align-center">
+                                     
+<div id="div1" class="hide">
+  <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
-                                                  <label class="form-label" for="exchange_based">DCA</label>
-                                                  <span class="form-note">Use DCA strategy</span>
+                                                  <label class="form-label" for="api_passphrase">API Passphrase</label>
+                                                  <span class="form-note">Enter API Passphrase</span>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-8 col-md-9">
+                                              <div class="form-group">
+                                                  <div class="form-control-wrap">
+                                                      <input type="text" name="api_passphrase" class="form-control" id="api_passphrase" value="">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+ <div class="row g-3 align-center">
+                                          <div class="col-sm-4 col-md-3">
+                                              <div class="form-group">
+                                                  <label class="form-label" for="exchange_based">KuCoin</label>
+                                                  <span class="form-note">Is this a sub-account?<a style="margin-left:6px;" href="#" title="If you are unsure, you do not have a sub-account." class="tooltip"><em class="icon ni ni-info-fill"></em></a></span>
                                               </div>
                                           </div>
                                           <div class="col-sm-8 col-md-9">
                                               <ul class="custom-control-group g-3 align-center flex-wrap">
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="exchange_dca" id="exchange_dca_yes" checked value="yes">
-                                                          <label class="custom-control-label" for="exchange_dca_yes">Enable</label>
+                                                          <input type="radio" class="custom-control-input" name="exchange_dca" id="kucoin_subaccount_no" checked value="yes">
+                                                          <label class="custom-control-label" for="kucoin_subaccount_no">No</label>
                                                       </div>
                                                   </li>
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="exchange_dca" id="exchange_dca_no" value="no">
-                                                          <label class="custom-control-label" for="exchange_dca_no">Disable</label>
+                                                          <input type="radio" class="custom-control-input" name="exchange_dca" id="kucoin_subaccount_yes" value="no">
+                                                          <label class="custom-control-label" for="kucoin_subaccount_yes">Yes</label>
                                                       </div>
                                                   </li>
                                               </ul>
                                           </div>
                                       </div>
+</div>
                                       <div class="row g-3">
                                           <div class="col-sm-4 col-md-3">
                                           </div>
@@ -163,6 +216,14 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+  function show1(){
+  document.getElementById('div1').style.display ='none';
+}
+function show2(){
+  document.getElementById('div1').style.display = 'block';
+}
+</script>
 <!-- content @e -->
 
 
