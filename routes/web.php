@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SignalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/signals', [SignalController::class, 'pushToKafka']);
+
+
+
+Route::get('/user', [UserController::class, 'index']);
 
 Route::get('/', function () {
     return view('welcome');
@@ -91,6 +98,7 @@ Route::group(['prefix' => '/dashboard', 'middleware' => ['auth', 'verified'], 'n
   Route::get('CoinbaseCreatePayment', 'CoinPilotController@CoinbaseCreatePayment')->name('CoinbaseCreatePayment');
 
 });
+
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
   Route::post('WebhookCoinbase', 'CoinbaseController@handle')->name('WebhookCoinbase');

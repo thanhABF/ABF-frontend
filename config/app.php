@@ -177,6 +177,9 @@ return [
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
 
+        // Kafka service providers
+        App\Providers\ProducerServiceProvider::class,
+
         Lab404\Impersonate\ImpersonateServiceProvider::class,
 
     ],
