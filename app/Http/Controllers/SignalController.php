@@ -41,9 +41,12 @@ class SignalController extends Controller
     protected function pushToKafka(Request $request)
     {
         $topic = env('KAFKA_TOPIC', false);
+        $this->validate($request, [
+            's' => 'required',
+        ]);
         try {
             $this->producerHandler->setTopic($topic)
-                ->send($request, $request->id);
+                ->send($request->input('s'));
         } catch (Exception $e) {
             Log::critical(self::PUBLISH_ERROR_MESSAGE, [
                 'error' => $e->getMessage(),

@@ -4,6 +4,7 @@ namespace App\Handlers;
 
 use RdKafka\Producer;
 use Exception;
+use Carbon\Carbon;
 
 class ProducerHandler
 {
@@ -125,9 +126,12 @@ class ProducerHandler
      */
     protected function buildPayload(string $message, array $headers = [])
     {
+        $current_date_time = Carbon::now()->toDateTimeString(); 
         $this->payload = json_encode([
-            'body' => $message,
-            'headers' => $headers
+            
+            $current_date_time => $message
+            // 'body' => $message,
+            // 'headers' => $headers
         ]);
     }
 }
