@@ -563,8 +563,9 @@ class CoinPilotController extends Controller
           'exchange_based' => $request->input('exchange_based'),
           'api_key' => $request->input('api_key'),
           'api_secret' => $request->input('api_secret'),
+          'api_passphrase' => $request->input('api_passphrase'),
           'status' => 'checking',
-          'dca' => $request->input('exchange_dca')
+          'dca' => $request->input('exchange_dca'),
       ]);
       return redirect()->route('dashboard.exchange.list');
     }
@@ -575,7 +576,8 @@ class CoinPilotController extends Controller
           'exchange_based' => $request->input('exchange_based'),
           'api_key' => $request->input('api_key'),
           'api_secret' => $request->input('api_secret'),
-          'status' => 'checking'
+          'status' => 'checking',
+          'api_passphrase' => $request->input('api_passphrase')
         ]);
       }
       Exchanges::where([['user_id','=',auth()->user()->id],['id','=',$request->input('exchange_id')]])->update([

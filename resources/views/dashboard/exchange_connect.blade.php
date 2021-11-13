@@ -137,8 +137,8 @@
                                                       <div class="custom-control custom-radio">
                                                         <!-- <input style="margin-top: 4px;margin-right: 5px;" type="radio" name="tab" value="igotnone" onclick="show1();" />
 Binance --->
-<input type="radio" class="custom-control-input" name="tab" id="exchange_dca_yes" checked value="yes" onclick="show1();">
-                                                          <label class="custom-control-label" for="exchange_dca_yes">Binance</label>
+                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_binance" checked value="Binance" onclick="show1();">
+                                                          <label class="custom-control-label" for="exchange_binance">Binance</label>
                                                       </div>&nbsp;&nbsp;
 
 
@@ -146,16 +146,16 @@ Binance --->
                                                       <div class="custom-control custom-radio">
                                                          <!-- <input style="margin-top: 4px;margin-right: 5px;" type="radio" name="tab" value="igottwo" onclick="show2();" />
 Kukoin --->
-                            <input type="radio" class="custom-control-input" name="tab" id="exchange_dca_no" value="no" onclick="show2();">
-                                                          <label class="custom-control-label" for="exchange_dca_no">KuCoin</label>
-                                                          </div>&nbsp;&nbsp;
+                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_kucoin" value="Kucoin" onclick="show2();">
+                                                          <label class="custom-control-label" for="exchange_kucoin">KuCoin</label>
+                                                      </div>&nbsp;&nbsp;
                                                   </li>
                                               </ul>
                                           </div>
                                       </div>
                                      
-<div id="div1" class="hide">
-  <div class="row g-3 align-center">
+                                    <<div id="div1" class="hide">
+                                        <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
                                                   <label class="form-label" for="api_passphrase">API Passphrase</label>
@@ -170,7 +170,8 @@ Kukoin --->
                                               </div>
                                           </div>
                                       </div>
- <div class="row g-3 align-center">
+                                      
+                                    <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
                                                   <label class="form-label" for="exchange_based">KuCoin</label>
@@ -181,20 +182,20 @@ Kukoin --->
                                               <ul class="custom-control-group g-3 align-center flex-wrap">
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="exchange_dca" id="kucoin_subaccount_no" checked value="yes">
+                                                          <input type="radio" class="custom-control-input" name="kucoin_subaccount" id="kucoin_subaccount_no" checked value="yes">
                                                           <label class="custom-control-label" for="kucoin_subaccount_no">No</label>
                                                       </div>
                                                   </li>
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="exchange_dca" id="kucoin_subaccount_yes" value="no">
+                                                          <input type="radio" class="custom-control-input" name="kucoin_subaccount" id="kucoin_subaccount_yes" value="no">
                                                           <label class="custom-control-label" for="kucoin_subaccount_yes">Yes</label>
                                                       </div>
                                                   </li>
                                               </ul>
                                           </div>
                                       </div>
-</div>
+                                    </div>
                                       <div class="row g-3">
                                           <div class="col-sm-4 col-md-3">
                                           </div>

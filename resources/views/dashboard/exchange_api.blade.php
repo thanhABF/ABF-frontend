@@ -107,6 +107,7 @@
                                               </div>
                                           </div>
                                       </div>
+                                      
                                       <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
@@ -118,38 +119,65 @@
                                               <ul class="custom-control-group g-3 align-center flex-wrap">
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" checked name="exchange_based" id="exchange_based" value="Binance">
-                                                          <label class="custom-control-label" for="reg-enable">Binance</label>
+                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_binance" @if($exchange[0]['exchange_based'] == 'Binance' xor empty($exchange[0]['exchange_based'])) checked @endif value="Binance" onclick="show1();">
+                                                          <label class="custom-control-label" for="exchange_binance">Binance</label>
+                                                      </div>
+                                                  </li>
+                                                  <li>
+                                                      <div class="custom-control custom-radio">
+                                                          <input type="radio" class="custom-control-input" name="exchange_based" id="exchange_kucoin" @if($exchange[0]['exchange_based'] == 'Kucoin') checked @endif value="Kucoin" onclick="show2();">
+                                                          <label class="custom-control-label" for="exchange_kucoin">Kucoin</label>
                                                       </div>
                                                   </li>
                                               </ul>
                                           </div>
                                       </div>
-                                      <div class="row g-3 align-center">
+                                      
+
+                                      <div id="div1" class="hide">
+                                        <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
-                                                  <label class="form-label" for="exchange_based">DCA</label>
-                                                  <span class="form-note">Use DCA strategy</span>
+                                                  <label class="form-label" for="api_passphrase">API Passphrase</label>
+                                                  <span class="form-note">Enter API Passphrase</span>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-8 col-md-9">
+                                              <div class="form-group">
+                                                  <div class="form-control-wrap">
+                                                      <input type="text" name="api_passphrase" class="form-control" id="api_passphrase" value="">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      
+                                    <div class="row g-3 align-center">
+                                          <div class="col-sm-4 col-md-3">
+                                              <div class="form-group">
+                                                  <label class="form-label" for="exchange_based">KuCoin</label>
+                                                  <span class="form-note">Is this a sub-account?<a style="margin-left:6px;" href="#" title="If you are unsure, you do not have a sub-account." class="tooltip"><em class="icon ni ni-info-fill"></em></a></span>
                                               </div>
                                           </div>
                                           <div class="col-sm-8 col-md-9">
                                               <ul class="custom-control-group g-3 align-center flex-wrap">
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="exchange_dca" id="exchange_dca_yes" @if($exchange[0]['dca'] == 'yes' xor empty($exchange[0]['dca'])) checked @endif value="yes">
-                                                          <label class="custom-control-label" for="exchange_dca_yes">Enable</label>
+                                                          <input type="radio" class="custom-control-input" name="kucoin_subaccount" id="kucoin_subaccount_no" checked value="yes">
+                                                          <label class="custom-control-label" for="kucoin_subaccount_no">No</label>
                                                       </div>
                                                   </li>
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="exchange_dca" id="exchange_dca_no" @if($exchange[0]['dca'] == 'no') checked @endif value="no">
-                                                          <label class="custom-control-label" for="exchange_dca_no">Disable</label>
+                                                          <input type="radio" class="custom-control-input" name="kucoin_subaccount" id="kucoin_subaccount_yes" value="no">
+                                                          <label class="custom-control-label" for="kucoin_subaccount_yes">Yes</label>
                                                       </div>
                                                   </li>
                                               </ul>
                                           </div>
                                       </div>
-                                      <div class="row g-3">
+                                    </div>
+
+                                    <div class="row g-3">
                                           <div class="col-sm-4 col-md-3">
                                           </div>
                                           <div class="col-sm-8 col-md-9">
@@ -158,6 +186,8 @@
                                               </div>
                                           </div>
                                       </div>
+
+
                                   </form>
 
 
@@ -171,7 +201,14 @@
     </div>
 </div>
 <!-- content @e -->
-
+<script type="text/javascript">
+  function show1(){
+  document.getElementById('div1').style.display ='none';
+}
+function show2(){
+  document.getElementById('div1').style.display = 'block';
+}
+</script>
 
 
 @endsection
