@@ -160,6 +160,18 @@ class CoinPilotController extends Controller
       return redirect()->route('index');
     }
 
+    // this is matt taylor's custom referral link
+    public function getstarted() {
+      $user = User::where('email','=','charlieskogen@gmail.com')->select('id')->limit(1)->get();
+      if(isset($user[0]->id)) {
+        $invited_by_user_id = $user[0]->id;
+        if(!empty($invited_by_user_id)) {
+          Cookie::queue('referral_id', $invited_by_user_id, 43200);
+        }
+      }
+      return redirect()->route('index');
+    }
+
     public function referral_detect2() {
       $referral_id = Cookie::get('referral_id');
       echo $referral_id;
@@ -551,8 +563,9 @@ class CoinPilotController extends Controller
           'exchange_based' => $request->input('exchange_based'),
           'api_key' => $request->input('api_key'),
           'api_secret' => $request->input('api_secret'),
+          'api_passphrase' => $request->input('api_passphrase'),
           'status' => 'checking',
-          'dca' => $request->input('exchange_dca')
+          'dca' => $request->input('exchange_dca'),
       ]);
       return redirect()->route('dashboard.exchange.list');
     }
@@ -563,7 +576,8 @@ class CoinPilotController extends Controller
           'exchange_based' => $request->input('exchange_based'),
           'api_key' => $request->input('api_key'),
           'api_secret' => $request->input('api_secret'),
-          'status' => 'checking'
+          'status' => 'checking',
+          'api_passphrase' => $request->input('api_passphrase')
         ]);
       }
       Exchanges::where([['user_id','=',auth()->user()->id],['id','=',$request->input('exchange_id')]])->update([

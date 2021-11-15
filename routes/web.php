@@ -35,6 +35,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
   Route::get('r2', 'CoinPilotController@referral_detect2');
 
   Route::get('dark_mode', 'CoinPilotController@dark_mode')->name('dark_mode');
+  Route::get("getstarted", "CoinPilotController@getstarted");
 });
 
 Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'verified'], 'namespace' => 'App\Http\Controllers', 'as' => 'admin.'], function () {

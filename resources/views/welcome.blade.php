@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+   <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="acff7d4d-baaf-4b99-99ba-4b3f694f19fd";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -92,7 +93,7 @@
                      <div class="col-4"><img class="img-fluid" src="{{ asset('assets-welcome/images/icon-3.svg') }}" /></div>
                      <div class="col-8">
                         <h5 class="card-p2 medium p-color bold">What is the cost?</h5>
-                        <p class="card-p2 medium p-color opac">We are confident in our results. We will invoice a 20% commission&nbsp;on&nbsp;trade earnings at the end of each month.</p>
+                        <p class="card-p2 medium p-color opac">We are confident in our results. We will invoice a 20% commission&nbsp;on&nbsp;trade earnings at the end of each week.</p>
                      </div>
                   </div>
                </div>
@@ -103,7 +104,7 @@
                      <div class="col-4"><img class="img-fluid" src="{{ asset('assets-welcome/images/icon-4.svg') }}" /></div>
                      <div class="col-8">
                         <h5 class="card-p2 medium p-color bold">What are the average returns?</h5>
-                        <p class="card-p2  medium opac p-color">ROI heavily varies on the market&#39;s performance. Average returns will be around 5-10% during the course of an entire month;&nbsp;with good months performing&nbsp;significantly higher.</p>
+                        <p class="card-p2  medium opac p-color">ROI heavily varies on the market&#39;s performance. Average returns will be around 5-15% during the course of an entire month;&nbsp;with good months performing&nbsp;significantly higher.</p>
                      </div>
                   </div>
                </div>
@@ -112,7 +113,7 @@
                      <div class="col-4"><img class="img-fluid" src="{{ asset('assets-welcome/images/icon-5.svg') }}" /></div>
                      <div class="col-8">
                         <h5 class="card-p2 medium p-color bold">What is the risk?</h5>
-                        <p class="card-p2 medium p-color opac">Trades will close in a loss from time to time, it happens to everyone. There is a stop-loss in place that would limit loss to around 5-10% depending on your chosen risk level. Win rate will consistently outweigh loss.&nbsp;</p>
+                        <p class="card-p2 medium p-color opac">Trades will close in a loss from time to time, it happens. There is a stop-loss in place that would limit loss to around 5-10%. Win rate will consistently outweigh loss.&nbsp;</p>
                      </div>
                   </div>
                </div>
@@ -131,17 +132,20 @@
       <!--    /////header content starts here////////////-->
       <section class="slider-bg py-4 align-items-center">
          <div class="container">
-            <h2 class="text-center pt-5 medium text-white wow fadeInUp" data-wow-delay=".5s" id="results">April's Return on Investment</h2>
+            <h2 class="text-center pt-5 medium text-white wow fadeInUp" data-wow-delay=".5s" id="results">October's Return on Investment</h2>
             <div class="carousel slide py-2 py-md-5" data-ride="carousel" id="carouselExampleControls">
                <ol class="carousel-indicators">
                   <li class="active" data-slide-to="0" data-target="#carouselExampleControls"></li>
-                  <!--<li data-slide-to="1" data-target="#carouselExampleControls"></li>-->
+                  <li data-slide-to="1" data-target="#carouselExampleControls"></li>
+                  <li data-slide-to="2" data-target="#carouselExampleControls"></li>
+                  <!--<li data-slide-to="2" data-target="#carouselExampleControls"></li>-->
                </ol>
                <div class="carousel-inner mx-auto inner-bg p-3">
                   <div class="carousel-item active"><img class="img-fluid" src="{{ asset('assets-welcome/images/ProfitAndLoss.png') }}" /></div>
                   <!--slider-1 ends-->
+                  <div class="carousel-item"><img class="img-fluid" src="{{ asset('assets-welcome/images/OctoberPositionspg2.png') }}" /></div>
                   <!--slider-2 ends-->
-                  <!--<div class="carousel-item "><img class="img-fluid" src="{{ asset('assets-welcome/images/B.png') }}" /></div>-->
+                  <div class="carousel-item"><img class="img-fluid" src="{{ asset('assets-welcome/images/OctoberPositionspg4.png') }}" /></div>
                   <!--slider-3 ends-->
                </div>
                <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleControls" role="button"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span> </a> <a class="carousel-control-next" data-slide="next" href="#carouselExampleControls" role="button"> <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span> </a>

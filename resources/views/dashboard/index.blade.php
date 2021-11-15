@@ -102,7 +102,7 @@
                                             <div class="chart-label">{{ $firstDay }}</div>
                                             <!--<div class="chart-label d-none d-sm-block">15 Jan, 2020</div>-->
                                             <div class="chart-label">{{ $lastDay }}</div>
-                                        </div>
+                                        </div>                                       
                                     </div>
                                 </div>
                             </div><!-- .card -->

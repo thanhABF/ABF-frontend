@@ -22,9 +22,21 @@
                                   <div class="card-inner card-inner-xl">
                                       <article class="entry">
 
-                                          <p>To get started using Coinpilot, you will need a Binance.com account, verified or unverified. If you are a member of the U.S, you will need a VPN to access Binance.</p>
-                                          <p>Binance sign-up link: <a href="https://www.binance.com/en/register?ref=153831969" target="_blank">https://www.binance.com/</a></p>
-                                          <p>Note: Depositing on Coinpilot is for paying invoices, not for trading!</p>
+                                          <p>Welcome to Coinpilot! Currently we are offering Binance.com and KuCoin exchanges.</p>
+                                          <p>You will need to create and attach your API key to Coinpilot from your chosen exchange.</p>
+                                          <p>By clicking on your exchange below, you can find a step-by-step guide to complete the process.
+                                          <p><b><u>Important mention</u></b></p>
+                                          <p>It's recommended to have atleast 0.02 BTC for optimal results. If you are under this thresh-hold your position sizes will be minimum due to not having a balance large enough to enable percentage based position sizes of 3%.</p>
+                                          <p>Trading under the threshold will still preform great, there will just be a lack of optimization.</p>
+                                          <div id="accordion" class="accordion">
+                                <div class="accordion-item">
+                                    <a href="#" class="accordion-head" data-toggle="collapse" data-target="#accordion-item-1">
+                                        <h6 class="title">Binance</h6>
+                                        <span class="accordion-icon"></span>
+                                    </a>
+                                    <div class="accordion-body collapse" id="accordion-item-1" data-parent="#accordion">
+                                        <div class="accordion-inner">
+                                        <p>Binance sign-up link: <a href="https://www.binance.com/en/register?ref=153831969" target="_blank">https://www.binance.com/</a></p>
                                           <h5>Once you have a Binance account, create an API key</h5>
                                           <div class="row col-12 col-sm-10 col-md-8">
                                               <img src="https://cdn.discordapp.com/attachments/845923757448101898/845924021665136671/setup1.jpg" alt="">
@@ -39,7 +51,37 @@
                                           </div>
                                           <h5 class="mt-5">Once you hit connect, you're done!</h5>
                                           <p>Trading will begin shortly and all statistics will display on your dashboard.</p>
-                                          <p>Remember, you must have at least <b>0.002</b> BTC!</p>
+                                        </div>
+                                        </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <a href="#" class="accordion-head collapsed" data-toggle="collapse" data-target="#accordion-item-2">
+                                        <h6 class="title">KuCoin</h6>
+                                        <span class="accordion-icon"></span>
+                                    </a>
+                                    <div class="accordion-body collapse" id="accordion-item-2" data-parent="#accordion" >
+                                        <div class="accordion-inner">
+                                        <p>Kucoin sign-up link: <a href="https://www.kucoin.com/ucenter/signup" target="_blank">https://www.kucoin.com/</a></p>
+                                        <h5>Once you have a KuCoin account, create an API key</h5>
+                                        <div class="row col-12 col-sm-10 col-md-8">
+                                              <img src="https://media.discordapp.net/attachments/904694533101584444/904698275876200458/unknown.png" alt="">
+                                            </div>
+                                        <p>Be sure to remember your passphrase and to have the options checked as shown below</p>
+                                        <div class="row col-12 col-sm-10 col-md-8">
+                                              <img src="https://cdn.discordapp.com/attachments/904694533101584444/904699387278659645/unknown_1.png" alt="">
+                                            </div>
+                                            <h5 class="mt-5">Once your API key is created, connect it on Coinpilot under "exchanges", or go to: <a href="{{ route('dashboard.exchange.connect') }}">Connect</a></h5>
+                                          <div class="row col-12 col-sm-10 col-md-8">
+                                              <img src="https://cdn.discordapp.com/attachments/904694533101584444/904817167864840262/e112df2a607de1a557e1ffc018e4aca4.png" alt="">
+                                          </div>
+                                          <p>Lastly, make sure that you transfer your balance into your trade fund</p>
+                                          <div class="row col-12 col-sm-10 col-md-8">
+                                              <img src="https://cdn.discordapp.com/attachments/904694533101584444/904700746551939112/Transfer.png" alt="">                                      
+                                          </div>
+                                          <h5>Once your API key is connected, you're done!</h5>
+                                          <p>Trading will begin shortly and all statistics will display on your dashboard.</p>
+                                        </div>
+                                        </div> 
                                       </article>
                                   </div>
                               </div>

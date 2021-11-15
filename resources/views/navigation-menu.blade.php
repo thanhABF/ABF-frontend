@@ -1,3 +1,4 @@
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="acff7d4d-baaf-4b99-99ba-4b3f694f19fd";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

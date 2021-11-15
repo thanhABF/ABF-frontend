@@ -31,16 +31,16 @@
                     <!--  -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item pt-2">
-                            <a class="nav-link text-white text-center" href="#features">About Us</a>
+                            <a class="nav-link text-white text-center" href="https://coinpilot.com/#features">About Us</a>
                         </li>
                         <li class="nav-item pt-2">
-                            <a class="nav-link text-white text-center" href="#investor">Investor</a>
+                            <a class="nav-link text-white text-center" href="https://coinpilot.com/#results">Results</a>
                         </li>
                         <li class="nav-item pt-2">
-                            <a class="nav-link  text-white text-center" href="#trader">Traders</a>
+                            <a class="nav-link  text-white text-center" href="https://coinpilot.com/#discord">Discord</a>
                         </li>
                         <li class="nav-item pt-2">
-                            <a class="nav-link  text-white text-center" href="#support">Support</a>
+                            <a class="nav-link  text-white text-center" href="https://coinpilot.com/#support">Support</a>
                         </li>
                     </ul>
                     <!--  -->
@@ -291,7 +291,7 @@
                     </div>
 
                     <div class="col-md-3 pt-3 pt-md-0">
-                        <p class="card-p2 "><span class="p1 footer-color medium">About Us</span><br>Lorem Ipsum Text would be pasted Lorem Ipsum Text would be pasted Lorem Ipsum Text would be pasted</p>
+                        <p class="card-p2 "><span class="p1 footer-color medium">About Us</span><br>Making cryptocurrency more accessible for everyone, day by day.</p>
                     </div>
                     <div class="col-md-3 pt-3 pt-md-0">
                         <p class="card-p2 "><span class="p1 footer-color medium">Feel free to contact us</span><br><a href="mailto:hello@coinpilot.com" style="text-decoration:none; color:white">hello@coinpilot.com</a></p>

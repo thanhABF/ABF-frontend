@@ -19,6 +19,7 @@ class Exchanges extends Model
       'exchange_based',
       'api_key',
       'api_secret',
+      'api_passphrase',
       'status',
       'dca'
     ];
