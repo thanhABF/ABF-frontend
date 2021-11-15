@@ -27,7 +27,7 @@
                                           <p>By clicking on your exchange below, you can find a step-by-step guide to complete the process.
                                           <p><b><u>Important mention</u></b></p>
                                           <p>It's recommended to have atleast 0.02 BTC for optimal results. If you are under this thresh-hold your position sizes will be minimum due to not having a balance large enough to enable percentage based position sizes of 3%.</p>
-                                          <p>Trading under the thresh-hold will still preform great, there will just be a lack of optimization.</p>
+                                          <p>Trading under the threshold will still preform great, there will just be a lack of optimization.</p>
                                           <div id="accordion" class="accordion">
                                 <div class="accordion-item">
                                     <a href="#" class="accordion-head" data-toggle="collapse" data-target="#accordion-item-1">
