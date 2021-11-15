@@ -154,7 +154,7 @@ Kukoin --->
                                           </div>
                                       </div>
                                      
-                                    <<div id="div1" class="hide">
+                                    <div id="div1" class="hide">
                                         <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
