@@ -49,9 +49,9 @@
                                     </a>
                                     <div class="accordion-body collapse" id="accordion-item-3" data-parent="#accordion" >
                                         <div class="accordion-inner">
-                                            <p>It's recommended to have at least 0.02 + BTC for optimal results. If you are under this thresh-hold your position sizes will be minimum due to not having a balance large enough to enable percentage based position sizes of 3%.
+                                            <p>It's recommended to have at least 0.02 + BTC for optimal results. If you are under this threshold your position sizes will be minimum due to not having a balance large enough to enable percentage based position sizes of 3%.
 
-Trading under the thresh-hold will still preform great, there will just be a lack of optimization.
+Trading under the threshold will still preform great, there will just be a lack of optimization.
                                         </div>
                                     </div>
                                 </div>
