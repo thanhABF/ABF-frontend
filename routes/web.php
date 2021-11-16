@@ -96,3 +96,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
   Route::post('WebhookCoinbase', 'CoinbaseController@handle')->name('WebhookCoinbase');
   Route::get('WebhookCoinbaseTest', 'CoinbaseController@test')->name('WebhookCoinbaseTest');
 });
+
+Route::group(['prefix' => '/user/profile', 'namespace' => 'App\Http\Controllers', 'middleware' => ['auth', 'verified']], function () {
+  // User & Profile...
+  Route::get('show', 'UserProfileController@show')->name('profile.show');
+});
