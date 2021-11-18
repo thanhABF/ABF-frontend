@@ -221,12 +221,12 @@ class CoinPilotController extends Controller
           $netProfit = round($netProfit, 8);
           $profit_chart = $profit_chart.strval($netProfit).",";
 
-          $invested = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote],['CloseDate','LIKE','%'.$firstDate.'%']])->sum('Invested');
-          $invested = round((float)$invested, 8);
-          if((float)$invested == 0) {
+          $invested_c = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote],['CloseDate','LIKE','%'.$firstDate.'%']])->sum('Invested');
+          $invested_c = round((float)$invested_c, 8);
+          if((float)$invested_c == 0) {
             $NetProfitPercent = 0;
           } else {
-            $NetProfitPercent = ((((float)$invested + (float)$netProfit) * 100) / (float)$invested) - 100;
+            $NetProfitPercent = ((((float)$invested_c + (float)$netProfit) * 100) / (float)$invested_c) - 100;
             $NetProfitPercent = round((float)$NetProfitPercent, 2);
           }
 
