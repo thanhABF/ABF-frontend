@@ -37,24 +37,21 @@ class GetCurrencyRate extends Command
      * @return int
      */
     public function handle() {
-        //API SETTINGS
-        $key = "6DlWWKt0SkBsGjsJtfwfFbbRsVrrPh7fEToVZlJ2Oc7E21A15fkBteZCxJZvt7lH";
-        $secret = "wuEKwrxbj3tDv56QVwFgovegR0KnZXOzmnNvkpYOepELssPLH5CGc7b5vd3oQN7n";
-
         //MAKE THE API REQUEST AND GET CURRENCY RATES
-        $s_time = "timestamp=".time()*1000;
-        $sign=hash_hmac('SHA256', $s_time, $secret);
+
         $url = "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=2";
         $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-MBX-APIKEY:'.$key));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+       
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, True);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, True);
         curl_setopt($ch, CURLOPT_URL, $url);
         $result = curl_exec($ch);
-        $result = json_decode($result, true);
-
+        curl_close($ch);
+        $response = json_decode($result);
+        error_log($result);
         $time_now = time()*1000;
-        foreach($result as $res) {
+        
+        foreach($response as $res) {
             $open_time = $res[0];
             $open = $res[1];
             $high = $res[2];
