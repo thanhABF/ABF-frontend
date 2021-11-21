@@ -206,7 +206,6 @@
                <div class="col-md-3 pt-3 pt-md-0">
                   <p class="card-p2 "><span class="p1 footer-color medium">Support</span><br />
                      <a href="#" style="text-decoration:none; color:white">Live chat</a><br />
-                     <a href="#" style="text-decoration:none; color:white">Status</a><br />
                      <a href="{{ route('terms') }}" style="text-decoration:none; color:white"> Terms & Conditions</a><br />
                      <a href="{{ route('privacy') }}" style="text-decoration:none; color:white">Privacy Policy</a>
                </div>

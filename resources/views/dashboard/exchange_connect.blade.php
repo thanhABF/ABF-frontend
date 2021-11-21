@@ -182,17 +182,37 @@ Kukoin --->
                                               <ul class="custom-control-group g-3 align-center flex-wrap">
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="kucoin_subaccount" id="kucoin_subaccount_no" checked value="yes">
+                                                          <!-- <input style="margin-top: 4px;margin-right: 5px;" type="radio" name="tab" value="igotnone" onclick="show3();" />
+No --->                                                         
+                                                          <input type="radio" class="custom-control-input" name="kucoin_subaccount" id="kucoin_subaccount_no" checked value="yes" onclick="show3();">
                                                           <label class="custom-control-label" for="kucoin_subaccount_no">No</label>
                                                       </div>
                                                   </li>
                                                   <li>
                                                       <div class="custom-control custom-radio">
-                                                          <input type="radio" class="custom-control-input" name="kucoin_subaccount" id="kucoin_subaccount_yes" value="no">
+                                                          <!-- <input style="margin-top: 4px;margin-right: 5px;" type="radio" name="tab" value="igottwo" onclick="show4();" />
+Yes --->                                                         
+                                                          <input type="radio" class="custom-control-input" name="kucoin_subaccount" id="kucoin_subaccount_yes" value="no" onclick="show4();">
                                                           <label class="custom-control-label" for="kucoin_subaccount_yes">Yes</label>
-                                                      </div>
                                                   </li>
                                               </ul>
+                                          </div>
+                                      </div>
+                                      </div>
+                                                      <div id="div2" class="hide">
+                                        <div class="row g-3 align-center">
+                                          <div class="col-sm-4 col-md-3">
+                                              <div class="form-group">
+                                                  <label class="form-label" for="api_passphrase">Sub-account Name</label>
+                                                  <span class="form-note">Enter sub-account name</span>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-8 col-md-9">
+                                              <div class="form-group">
+                                                  <div class="form-control-wrap">
+                                                      <input type="text" name="subaccount_name" class="form-control" id="subaccount_name" value="">
+                                                  </div>
+                                              </div>
                                           </div>
                                       </div>
                                     </div>
@@ -223,6 +243,14 @@ Kukoin --->
 }
 function show2(){
   document.getElementById('div1').style.display = 'block';
+}
+</script>
+<script type="text/javascript">
+function show3(){
+  document.getElementById('div2').style.display ='none';
+}
+function show4(){
+  document.getElementById('div2').style.display = 'block';
 }
 </script>
 <!-- content @e -->
