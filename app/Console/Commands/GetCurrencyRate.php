@@ -42,16 +42,16 @@ class GetCurrencyRate extends Command
         $url = "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=2";
         $ch = curl_init($url);
        
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, True);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, True);
         curl_setopt($ch, CURLOPT_URL, $url);
         $result = curl_exec($ch);
-        $result = json_decode($result);
+        curl_close($ch);
+        $response = json_decode($result);
         error_log($result);
         $time_now = time()*1000;
-        curl_close($ch);
-
-        foreach($result as $res) {
+        
+        foreach($response as $res) {
             $open_time = $res[0];
             $open = $res[1];
             $high = $res[2];
