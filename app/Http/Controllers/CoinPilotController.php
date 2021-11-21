@@ -198,7 +198,6 @@ class CoinPilotController extends Controller
       $profit = number_format((float)$profit, 8, '.', ' ');
 
       $amount_trades = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote]])->count();
-      
 
       if(!empty($timestampCheck = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote]])->orderBy('CloseDateTimestamp','desc')->select('CloseDateTimestamp')->first())) {
           $timestampCheck = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote]])->orderBy('CloseDateTimestamp','desc')->select('CloseDateTimestamp')->first()->toArray();
@@ -223,12 +222,12 @@ class CoinPilotController extends Controller
           $profit_chart = $profit_chart.strval($netProfit).",";
           $_profit = $netProfit;
 
-          $invested = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote],['CloseDate','LIKE','%'.$firstDate.'%']])->sum('Invested');
-          $invested = round((float)$invested, 8);
-          if((float)$invested == 0) {
+          $invested_c = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote],['CloseDate','LIKE','%'.$firstDate.'%']])->sum('Invested');
+          $invested_c = round((float)$invested_c, 8);
+          if((float)$invested_c == 0) {
             $NetProfitPercent = 0;
           } else {
-            $NetProfitPercent = ((((float)$invested + (float)$netProfit) * 100) / (float)$invested) - 100;
+            $NetProfitPercent = ((((float)$invested_c + (float)$netProfit) * 100) / (float)$invested_c) - 100;
             $NetProfitPercent = round((float)$NetProfitPercent, 2);
           }
 
@@ -253,7 +252,7 @@ class CoinPilotController extends Controller
         $lastDay = Carbon::now()->format('d M Y');
         $firstDay = Carbon::now()->format('d M Y');
       }
-      $return = $profit + $invested;
+      $return = round($profit + $invested,8);
       $balance = Balance::where('user_id','=',auth()->user()->id)->get()->toArray()[0]['balance'];
       return view('dashboard.index', compact('balance', 'invested', 'profit', 'return', 'amount_trades', 'profit_chart', 'date_chart', 'lastDay', 'firstDay', 'netprofitpercent_chart'));
     }
@@ -268,7 +267,7 @@ class CoinPilotController extends Controller
       $profit = number_format((float)$profit, 8, '.', ' ');
 
       $amount_trades = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote]])->count();
-      $return = $profit + $invested;
+      
 
       if(!empty($timestampCheck = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote]])->orderBy('CloseDateTimestamp','desc')->select('CloseDateTimestamp')->first())) {
           $timestampCheck = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote]])->orderBy('CloseDateTimestamp','desc')->select('CloseDateTimestamp')->first()->toArray();
@@ -291,12 +290,12 @@ class CoinPilotController extends Controller
           $netProfit = round($netProfit, 8);
           $profit_chart = $profit_chart.strval($netProfit).",";
 
-          $invested = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote],['CloseDate','LIKE','%'.$firstDate.'%']])->sum('Invested');
-          $invested = round((float)$invested, 8);
-          if((float)$invested == 0) {
+          $invested_c = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote],['CloseDate','LIKE','%'.$firstDate.'%']])->sum('Invested');
+          $invested_c = round((float)$invested, 8);
+          if((float)$invested_c == 0) {
             $NetProfitPercent = 0;
           } else {
-            $NetProfitPercent = ((((float)$invested + (float)$netProfit) * 100) / (float)$invested) - 100;
+            $NetProfitPercent = ((((float)$invested_c + (float)$netProfit) * 100) / (float)$invested_c) - 100;
             $NetProfitPercent = round((float)$NetProfitPercent, 2);
           }
 
@@ -319,7 +318,7 @@ class CoinPilotController extends Controller
         $lastDay = Carbon::now()->format('d M Y');
         $firstDay = Carbon::now()->format('d M Y');
       }
-
+      $return = round($profit + $invested,8);
       $balance = Balance::where('user_id','=',auth()->user()->id)->get()->toArray()[0]['balance'];
       return view('dashboard.indext', compact('balance', 'invested', 'profit', 'return', 'amount_trades', 'profit_chart', 'date_chart', 'lastDay', 'firstDay', 'netprofitpercent_chart'));
     }

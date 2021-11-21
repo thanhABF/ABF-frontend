@@ -56,7 +56,6 @@ class CommissionCount extends Command
             } else {
               $commission_rate = 0.2;
             }
-
             $dayStart = Carbon::now()->subDays(6)->format('Y-m-d');
             //echo "\n\n";
             //echo "dayStart: ".$dayStart."<br>";
