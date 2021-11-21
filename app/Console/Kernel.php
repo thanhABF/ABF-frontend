@@ -25,9 +25,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('GetCurrencyRate')->hourlyAt(10); //Run the task every hour at 10 minutes past the hour
-        //$schedule->command('CommissionCount')->dailyAt('12:00'); //Run the task daily at 1:00 & 13:00
+        $schedule->command('CommissionCount')->dailyAt('12:00'); //Run the task daily at 1:00 & 13:00
         $schedule->command('UserStatus')->twiceDaily(2, 14); //Run the task daily at 2:00 & 14:00
-        //$schedule->command('CommissionCharge')->weeklyOn(5, '13:00'); //Run the task daily at Friday at 13:00
+        $schedule->command('CommissionCharge')->weeklyOn(5, '13:00'); //Run the task daily at Friday at 13:00
         $schedule->command('ReferralTierCount')->dailyAt('14:00'); //Run the task daily at 3:00 & 15:00
     }
 
