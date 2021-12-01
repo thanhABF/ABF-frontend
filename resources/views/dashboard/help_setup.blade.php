@@ -61,7 +61,7 @@
                                     </a>
                                     <div class="accordion-body collapse" id="accordion-item-2" data-parent="#accordion" >
                                         <div class="accordion-inner">
-                                        <p>Kucoin sign-up link: <a href="https://www.kucoin.com/ucenter/signup" target="_blank">https://www.kucoin.com/</a></p>
+                                        <p>Kucoin sign-up link: <a href="https://www.kucoin.com/ucenter/signup?rcode=r3CD8VT" target="_blank">https://www.kucoin.com/</a></p>
                                         <h5>Once you have a KuCoin account, create an API key</h5>
                                         <div class="row col-12 col-sm-10 col-md-8">
                                               <img src="https://media.discordapp.net/attachments/904694533101584444/904698275876200458/unknown.png" alt="">

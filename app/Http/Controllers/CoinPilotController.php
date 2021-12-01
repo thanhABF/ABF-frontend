@@ -567,19 +567,23 @@ class CoinPilotController extends Controller
           'api_secret' => $request->input('api_secret'),
           'api_passphrase' => $request->input('api_passphrase'),
           'status' => 'checking',
-          'dca' => $request->input('exchange_dca'),
+          'dca' => 'yes',
+          'subaccount' => $request->input('subaccount'),
+          'quote_asset' => $request->input('quote_asset'),
       ]);
       return redirect()->route('dashboard.exchange.list');
     }
 
     public function edit_api(Request $request) {
-      if(!empty($request->input('api_key'))) {
+      if($request->input('status')=="stopped") {
         Exchanges::where([['user_id','=',auth()->user()->id],['id','=',$request->input('exchange_id')]])->update([
-          'exchange_based' => $request->input('exchange_based'),
-          'api_key' => $request->input('api_key'),
-          'api_secret' => $request->input('api_secret'),
-          'status' => 'checking',
-          'api_passphrase' => $request->input('api_passphrase')
+          'status' => $request->input('status'),
+          'quote_asset'=> $request->input('quote_asset'),
+        ]);
+      }elseif($request->input('status')=="checking"){
+        Exchanges::where([['user_id','=',auth()->user()->id],['id','=',$request->input('exchange_id')]])->update([
+          'status' => $request->input('status'),
+          'quote_asset'=> $request->input('quote_asset'),
         ]);
       }
       Exchanges::where([['user_id','=',auth()->user()->id],['id','=',$request->input('exchange_id')]])->update([

@@ -77,7 +77,7 @@
                                               </div>
                                           </div>
                                       </div>
-                                      <div class="row g-3 align-center">
+                                      <!-- <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
                                                   <label class="form-label" for="exchange_based">Exchange</label>
@@ -94,7 +94,7 @@
                                                   </li>
                                               </ul>
                                           </div>
-                                      </div>
+                                      </div> -->
                                       <div class="row g-3">
                                           <div class="col-sm-4 col-md-3">
                                           </div>
