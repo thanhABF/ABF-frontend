@@ -46,6 +46,7 @@
                                         <div class="nk-tb-col"><span>Name</span></div>
                                         <div class="nk-tb-col"><span>Exchange</span></div>
                                         <div class="nk-tb-col nk-tb-col-status"><span class="sub-text d-none d-md-block">Status</span></div>
+                                        <div class="nk-tb-col"><span>Quote Symbol</span></div>
                                         <div class="nk-tb-col"><span>DCA</span></div>
                                         <div class="nk-tb-col nk-tb-col-tools"></div>
                                     </div><!-- .nk-tb-item -->
@@ -72,6 +73,18 @@
                                                       <span class="badge badge-sm badge-dim badge-outline-danger d-none d-md-inline-flex">Error: API</span>
                                                   @elseif($exchange['status'] == 'stopped')
                                                       <span class="badge badge-sm badge-dim badge-outline-warning d-none d-md-inline-flex">Stopped</span>
+                                                  @endif
+                                              </div>
+                                              <div class="nk-tb-col">
+                                                  <div class="dot dot-success d-md-none"></div>
+                                                  
+                                                  @if($exchange['quote_asset'] == 'USDT')
+                                                      <span class="tb-lead-sub"">USDT</span>
+                                                  @elseif($exchange['quote_asset'] == 'BTC')
+                                                      <span class="tb-lead-sub">BTC</span>
+                                                  @elseif($exchange['quote_asset'] == 'BOTH')
+                                                      <span class="tb-lead-sub">BOTH</span>
+                                                      @elseif($exchange['quote_asset'] == 'BOTH')
                                                   @endif
                                               </div>
                                               <div class="nk-tb-col">
