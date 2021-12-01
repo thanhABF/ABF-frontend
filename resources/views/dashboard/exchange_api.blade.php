@@ -77,7 +77,7 @@
                                               </div>
                                           </div>
                                       </div>
-                                      <div class="row g-3 align-center">
+                                      <!-- <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
                                                   <label class="form-label" for="api_key">API Key</label>
@@ -91,8 +91,8 @@
                                                   </div>
                                               </div>
                                           </div>
-                                      </div>
-                                      <div class="row g-3 align-center">
+                                      </div> -->
+                                      <!-- <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
                                                   <label class="form-label" for="api_secret">API Secret</label>
@@ -106,9 +106,9 @@
                                                   </div>
                                               </div>
                                           </div>
-                                      </div>
+                                      </div> -->
                                       
-                                      <div class="row g-3 align-center">
+                                      <!-- <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
                                                   <label class="form-label" for="exchange_based">Exchange</label>
@@ -131,10 +131,10 @@
                                                   </li>
                                               </ul>
                                           </div>
-                                      </div>
+                                      </div> -->
                                       
 
-                                      <div id="div1" class="hide">
+                                      <!-- <div id="div1" class="hide">
                                         <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
@@ -149,9 +149,9 @@
                                                   </div>
                                               </div>
                                           </div>
-                                      </div>
+                                      </div> -->
                                       
-                                    <div class="row g-3 align-center">
+                                    <!-- <div class="row g-3 align-center">
                                           <div class="col-sm-4 col-md-3">
                                               <div class="form-group">
                                                   <label class="form-label" for="exchange_based">KuCoin</label>
@@ -175,7 +175,66 @@
                                               </ul>
                                           </div>
                                       </div>
-                                    </div>
+                                    </div> -->
+
+
+                                    <div class="row g-3 align-center">
+                                          <div class="col-sm-4 col-md-3">
+                                              <div class="form-group">
+                                                  <label class="form-label" for="exchange_based">Stop trading?</label>
+                                                  <span class="form-note">Select "yes" if you want to stop trading</span>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-8 col-md-9">
+                                              <ul class="custom-control-group g-3 align-center flex-wrap">
+                                                  <li>
+                                                      <div class="custom-control custom-radio">
+                                                        <!-- <input style="margin-top: 4px;margin-right: 5px;" type="radio" name="tab" value="igotnone" onclick="show1();" />
+Binance --->
+                                                          <input type="radio" class="custom-control-input" name="status" id="status_checking" checked value="checking">
+                                                          <label class="custom-control-label" for="status_checking">No</label>
+                                                      </div>&nbsp;&nbsp;
+
+
+
+                                                      <div class="custom-control custom-radio">
+                                                          <input type="radio" class="custom-control-input" name="status" id="status_stopped" value="stopped">
+                                                          <label class="custom-control-label" for="status_stopped">Yes</label>
+                                                      </div>&nbsp;&nbsp;
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                      <div class="row g-3 align-center">
+                                          <div class="col-sm-4 col-md-3">
+                                              <div class="form-group">
+                                                  <label class="form-label" for="quote_asset">Quote symbol</label>
+                                                  <span class="form-note">Which symbol do you want to trade?</span>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-8 col-md-9">
+                                              <ul class="custom-control-group g-3 align-center flex-wrap">
+                                                  <li>
+                                                      <div class="custom-control custom-radio">                                                     
+                                                          <input type="radio" class="custom-control-input" name="quote_asset" id="quote_asset_btc" checked value="BTC" >
+                                                          <label class="custom-control-label" for="quote_asset_btc">BTC</label>
+                                                      </div>
+                                                  </li>
+                                                  <li>
+                                                      <div class="custom-control custom-radio">                                                      
+                                                          <input type="radio" class="custom-control-input" name="quote_asset" id="quote_asset_usdt" value="USDT" >
+                                                          <label class="custom-control-label" for="quote_asset_usdt">USDT</label>
+                                                  </li>
+                                                  <li>
+                                                      <div class="custom-control custom-radio">                                        
+                                                          <input type="radio" class="custom-control-input" name="quote_asset" id="quote_asset_both" value="BOTH" >
+                                                          <label class="custom-control-label" for="quote_asset_both">BOTH</label>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                      </div>
+
 
                                     <div class="row g-3">
                                           <div class="col-sm-4 col-md-3">
@@ -200,15 +259,7 @@
         </div>
     </div>
 </div>
-<!-- content @e -->
-<script type="text/javascript">
-  function show1(){
-  document.getElementById('div1').style.display ='none';
-}
-function show2(){
-  document.getElementById('div1').style.display = 'block';
-}
-</script>
+
 
 
 @endsection

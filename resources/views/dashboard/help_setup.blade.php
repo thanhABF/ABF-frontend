@@ -39,15 +39,15 @@
                                         <p>Binance sign-up link: <a href="https://www.binance.com/en/register?ref=153831969" target="_blank">https://www.binance.com/</a></p>
                                           <h5>Once you have a Binance account, create an API key</h5>
                                           <div class="row col-12 col-sm-10 col-md-8">
-                                              <img src="https://cdn.discordapp.com/attachments/845923757448101898/845924021665136671/setup1.jpg" alt="">
+                                              <img src="https://cdn.discordapp.com/attachments/904694489518587925/904695682961637406/setup1.png" alt="">
                                           </div>
                                           <p>Make sure withdrawl is not enabled and all other options match the image (should be default)</p>
                                           <div class="row col-12 col-sm-10 col-md-8">
-                                              <img src="https://cdn.discordapp.com/attachments/845923757448101898/845924194188263464/setup2_1.jpg" alt="">
+                                              <img src="https://cdn.discordapp.com/attachments/904694489518587925/904695865959141386/setup2_1.png" alt="">
                                           </div>
                                           <h5 class="mt-5">Once your API key is created, connect it on Coinpilot under "exchanges", or go to: <a href="{{ route('dashboard.exchange.connect') }}">Connect</a></h5>
                                           <div class="row col-12 col-sm-10 col-md-8">
-                                              <img src="https://cdn.discordapp.com/attachments/845923757448101898/845924546238218260/setup3.jpg" alt="">
+                                              <img src="https://cdn.discordapp.com/attachments/904694489518587925/904695999338016798/setup3.png" alt="">
                                           </div>
                                           <h5 class="mt-5">Once you hit connect, you're done!</h5>
                                           <p>Trading will begin shortly and all statistics will display on your dashboard.</p>
@@ -61,7 +61,7 @@
                                     </a>
                                     <div class="accordion-body collapse" id="accordion-item-2" data-parent="#accordion" >
                                         <div class="accordion-inner">
-                                        <p>Kucoin sign-up link: <a href="https://www.kucoin.com/ucenter/signup" target="_blank">https://www.kucoin.com/</a></p>
+                                        <p>Kucoin sign-up link: <a href="https://www.kucoin.com/ucenter/signup?rcode=r3CD8VT" target="_blank">https://www.kucoin.com/</a></p>
                                         <h5>Once you have a KuCoin account, create an API key</h5>
                                         <div class="row col-12 col-sm-10 col-md-8">
                                               <img src="https://media.discordapp.net/attachments/904694533101584444/904698275876200458/unknown.png" alt="">
