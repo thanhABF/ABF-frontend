@@ -49,8 +49,8 @@
                                         </div>
                                         <div class="card-tools shrink-0 d-none d-sm-block">
                                             <ul class="nav nav-switch-s2 nav-tabs bg-white">
-                                                <li class="nav-item"><a href="#" class="nav-link active">BTC</a></li>
-                                                <!--<li class="nav-item"><a href="#" class="nav-link">USDT</a></li>-->
+                                                <li class="nav-item"><a href="{{ route('dashboard.index') }}" class="nav-link">BTC</a></li>
+                                                <li class="nav-item"><a href="{{ route('dashboard.indext') }}" class="nav-link">USDT</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@
                                               <div class="analytic-data">
                                                   <div class="title">Total Profit</div>
                                                   <div class="amount">{{ $profit }} <small><em class="icon ni ni-sign-btc"></em></small></div>
-                                                  <!--<div class="change up"><em class="icon ni ni-arrow-long-up"></em>12.37%</div>-->
+                                                  <!-- <div class="change up"><em class="icon ni ni-arrow-long-up"></em>12.37%</div> -->
                                               </div>
                                             </div>
                                             <div class="col-6 col-md-3 mt-1">
