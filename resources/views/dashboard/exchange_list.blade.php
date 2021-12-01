@@ -70,6 +70,8 @@
                                                       <span class="badge badge-sm badge-dim badge-outline-warning d-none d-md-inline-flex">Checking</span>
                                                   @elseif($exchange['status'] == 'error')
                                                       <span class="badge badge-sm badge-dim badge-outline-danger d-none d-md-inline-flex">Error: API</span>
+                                                  @elseif($exchange['status'] == 'stopped')
+                                                      <span class="badge badge-sm badge-dim badge-outline-warning d-none d-md-inline-flex">Stopped</span>
                                                   @endif
                                               </div>
                                               <div class="nk-tb-col">

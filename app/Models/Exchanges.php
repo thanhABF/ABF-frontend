@@ -21,7 +21,9 @@ class Exchanges extends Model
       'api_secret',
       'api_passphrase',
       'status',
-      'dca'
+      'dca',
+      'quote_asset',
+      'subaccount'
     ];
 
     public $timestamps = true;
