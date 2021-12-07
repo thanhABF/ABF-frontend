@@ -64,6 +64,7 @@ Route::group(['prefix' => '/dashboard', 'middleware' => ['auth', 'verified'], 'n
 
   Route::get('help_setup', 'CoinPilotController@help_setup')->name('help_setup');
   Route::get('help_faq', 'CoinPilotController@help_faq')->name('help_faq');
+  Route::get('help_reports', 'CoinPilotController@help_reports')->name('help_reports');
 
 
   Route::get('referral_link_duplicates/{link}', 'CoinPilotController@referral_link_duplicates')->name('referral_link_duplicates');
