@@ -79,7 +79,7 @@
                         </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{ route('dashboard.help_reports') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-question"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-file-text"></em></span>
                             <span class="nk-menu-text">Reports</span>
                         </a>   
                                        
