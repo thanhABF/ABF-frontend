@@ -26,7 +26,7 @@
                                     </a>
                                     <div class="accordion-body collapse" id="accordion-item-1" data-parent="#accordion">
                                         <div class="accordion-inner">
-                                        <a href="http:coinpilot.com/assets-welcome/images/November%20Report.pdf" class="pdf-btn" target="blank">Click to download the report</a>
+                                        <a href="https:coinpilot.com/assets-welcome/images/November%20Report.pdf" class="pdf-btn" target="blank">Click to download the report</a>
                                         </div>
                                     </div>
                                 </div>
