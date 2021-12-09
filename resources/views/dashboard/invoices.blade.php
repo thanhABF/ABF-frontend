@@ -116,7 +116,7 @@
                                                       <tr class="nk-tb-item nk-tb-head">
                                                           <th class="nk-tb-col"><span class="sub-text">Date</span></th>
                                                           <th class="nk-tb-col"><span class="sub-text">Profit</span></th>
-                                                          <th class="nk-tb-col"><span class="sub-text">Convertion Rate</span></th>
+                                                          <th class="nk-tb-col"><span class="sub-text">Conversion Rate</span></th>
                                                           <th class="nk-tb-col"><span class="sub-text">Commission Rate</span></th>
                                                           <th class="nk-tb-col"><span class="sub-text">Commission</span></th>
                                                           <th class="nk-tb-col"><span class="sub-text">Payment status</span></th>

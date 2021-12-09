@@ -76,7 +76,15 @@
                             <span class="nk-menu-icon"><em class="icon ni ni-question"></em></span>
                             <span class="nk-menu-text">FAQ</span>
                         </a>
-                    </li><!-- .nk-menu-item -->
+                        </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
+                        <a href="{{ route('dashboard.help_reports') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-file-text"></em></span>
+                            <span class="nk-menu-text">Reports</span>
+                        </a>   
+                                       
+                 </li>
+                    <!-- .nk-menu-item -->
 
                     <li class="nk-menu-heading">
                         <h6 class="overline-title text-primary-alt">Contacts</h6>
