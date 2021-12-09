@@ -447,6 +447,11 @@ class CoinPilotController extends Controller
       return view('dashboard.help_faq', compact('balance'));
     }
 
+    public function help_reports() {
+      $balance = Balance::where('user_id','=',auth()->user()->id)->get()->toArray()[0]['balance'];
+      return view('dashboard.help_reports', compact('balance'));
+    }
+
 
     public function referral_link_duplicates($link) {
       $unique = User::where('referral_link','=',$link)->select('id')->limit(1)->get();

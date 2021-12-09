@@ -26,6 +26,101 @@
       <meta property="og:title" content="Coinpilot" />
       <meta property="og:description" content="Crypto trading, the easy way." />
       <style type="text/css">.c1-ui-state-hover {background-color:yellow !important; padding:5px !important }
+      /*
+ CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Styling
+*/
+.tabset{
+   padding-top:50px !important;
+}
+.pdf-btn{
+text-align:center !important;
+text-decoration:none !important;
+color:white;
+font-size:16px;
+margin:auto !important;
+display:block;
+width:140px;
+}
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #fff;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: #06c;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #06c;
+}
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  background-color:white;
+  border-radius:5px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+/*
+ Demo purposes only
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+.tabset {
+  max-width: 65em;
+}
       </style>
    </head>
    <body>
@@ -132,8 +227,44 @@
       <!--    /////header content starts here////////////-->
       <section class="slider-bg py-4 align-items-center">
          <div class="container">
-            <h2 class="text-center pt-5 medium text-white wow fadeInUp" data-wow-delay=".5s" id="results">October's Return on Investment</h2>
-            <div class="carousel slide py-2 py-md-5" data-ride="carousel" id="carouselExampleControls">
+  
+
+
+<div class="tabset">
+  <!-- Tab 1 -->
+  <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+  <label for="tab1">November</label>
+  <!-- Tab 2 -->
+  <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+  <label for="tab2">October</label>
+  <!-- Tab 3 -->
+  
+  <div class="tab-panels">
+    <section id="marzen" class="tab-panel">
+    <h2 class="text-center pt-5 medium text-white wow fadeInUp" data-wow-delay=".5s" id="results">November's Return on Investment</h2>
+    
+    <a href="http://127.0.0.1:8000/assets-welcome/images/November%20Report.pdf" class="pdf-btn" target="blank">Download the pdf</a>
+    <div class="carousel slide py-2 py-md-5" data-ride="carousel" id="carouselExampleControls2">
+               <ol class="carousel-indicators">
+                  <li class="active" data-slide-to="0" data-target="#carouselExampleControls2"></li>
+                  <li data-slide-to="1" data-target="#carouselExampleControls2"></li>
+                  <li data-slide-to="2" data-target="#carouselExampleControls2"></li>
+                  <!--<li data-slide-to="2" data-target="#carouselExampleControls"></li>-->
+               </ol>
+               <div class="carousel-inner mx-auto inner-bg p-3">
+                  <div class="carousel-item active"><img class="img-fluid" src="{{ asset('assets-welcome/images/NovemberProfit.png') }}" /></div>
+                  <!--slider-1 ends-->
+                  <div class="carousel-item"><img class="img-fluid" src="{{ asset('assets-welcome/images/NovemberPositions1.png') }}" /></div>
+                  <!--slider-2 ends-->
+                  <div class="carousel-item"><img class="img-fluid" src="{{ asset('assets-welcome/images/NovemberPositions2.png') }}" /></div>
+                  <!--slider-3 ends-->
+               </div>
+               <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleControls2" role="button"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span> </a> <a class="carousel-control-next" data-slide="next" href="#carouselExampleControls2" role="button"> <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span> </a>
+            </div>
+  </section>
+    <section id="rauchbier" class="tab-panel">
+    <h2 class="text-center pt-5 medium text-white">October's Return on Investment</h2>
+    <div class="carousel slide py-2 py-md-5" data-ride="carousel" id="carouselExampleControls">
                <ol class="carousel-indicators">
                   <li class="active" data-slide-to="0" data-target="#carouselExampleControls"></li>
                   <li data-slide-to="1" data-target="#carouselExampleControls"></li>
@@ -150,6 +281,17 @@
                </div>
                <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleControls" role="button"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span> </a> <a class="carousel-control-next" data-slide="next" href="#carouselExampleControls" role="button"> <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span> </a>
             </div>
+    </section>
+    <section id="dunkles" class="tab-panel">
+      <h2>6C. Dunkles Bock</h2>
+      <p><strong>Overall Impression:</strong> A dark, strong, malty German lager beer that emphasizes the malty-rich and somewhat toasty qualities of continental malts without being sweet in the finish.</p>
+      <p><strong>History:</strong> Originated in the Northern German city of Einbeck, which was a brewing center and popular exporter in the days of the Hanseatic League (14th to 17th century). Recreated in Munich starting in the 17th century. The name “bock” is based on a corruption of the name “Einbeck” in the Bavarian dialect, and was thus only used after the beer came to Munich. “Bock” also means “Ram” in German, and is often used in logos and advertisements.</p>
+    </section>
+  </div>
+  
+</div>
+
+         
             <!--   ///////////////slider ends here/////////////-->
             <p class="pt-4"></p>
          </div>
@@ -217,3 +359,5 @@
       </script>
    </body>
 </html>
+
+
