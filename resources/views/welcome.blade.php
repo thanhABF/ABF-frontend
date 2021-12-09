@@ -243,7 +243,7 @@ width:140px;
     <section id="marzen" class="tab-panel">
     <h2 class="text-center pt-5 medium text-white wow fadeInUp" data-wow-delay=".5s" id="results">November's Return on Investment</h2>
     
-    <a href="https:coinpilot.com/assets-welcome/images/November%20Report.pdf" class="pdf-btn" target="blank">Download the pdf</a>
+    <a href="https:/assets-welcome/images/November%20Report.pdf" class="pdf-btn" target="blank">Download the pdf</a>
     <div class="carousel slide py-2 py-md-5" data-ride="carousel" id="carouselExampleControls2">
                <ol class="carousel-indicators">
                   <li class="active" data-slide-to="0" data-target="#carouselExampleControls2"></li>
