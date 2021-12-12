@@ -92,6 +92,26 @@
                                     <li><!--<a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a>-->
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
+                                        <a href="/user/profile"><span>Profile</span></a>
+                                    </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-inner">
+                                <ul class="link-list">
+                                    <li><!--<a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a>-->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a href="#"><span>Connect to Discord</span></a>
+                                    </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-inner">
+                                <ul class="link-list">
+                                    <li><!--<a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a>-->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
                                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();"><em class="icon ni ni-signout"></em><span>Sign out</span></a>
                                     </form>
                                     </li>

@@ -1,5 +1,5 @@
 <!-- main header @s -->
-<div class="nk-header nk-header-fixed is-light">
+<div class="nk-header nk-header-fixed @if(Cookie::get('dark_mode') == '1') is-dark @else is-light @endif">
     <div class="container-fluid">
         <div class="nk-header-wrap">
             <div class="nk-menu-trigger d-xl-none ml-n1">
@@ -32,7 +32,7 @@
             <div class="nk-header-tools">
                 <ul class="nk-quick-nav">
                     <li class="dropdown user-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="#" class="dropdown-toggle" id="dropdown-toggle" data-toggle="dropdown">
                             <div class="user-toggle">
                                 <div class="user-avatar sm">
                                     <em class="icon ni ni-user-alt"></em>
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-md dropdown-menu-right dropdown-menu-s1">
+                        <div class="dropdown-menu dropdown-menu-md dropdown-menu-right dropdown-menu-s1" id="dropdown-menu">
                             <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                                 <div class="user-card">
                                     <div class="user-avatar">
@@ -71,7 +71,27 @@
                                     <li><!--<a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a>-->
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
-                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();"><em class="icon ni ni-signout"></em><span>Sign out</span></a>
+                                        <a href="/user/profile"><span class="sign-out">Profile</span></a>
+                                    </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-inner">
+                                <ul class="link-list">
+                                    <li><!--<a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a>-->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a href="#"><span class="sign-out">Connect to Discord</span></a>
+                                    </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-inner">
+                                <ul class="link-list">
+                                    <li><!--<a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a>-->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();"><em class="icon ni ni-signout"></em><span class="sign-out">Sign out</span></a>
                                     </form>
                                     </li>
                                 </ul>
