@@ -127,7 +127,7 @@ width:140px;
       <!-- Navbar -->
       <nav class="navbar navbar-expand-xl bg-nav pt-xl-5">
          <div class="container">
-            <a class="navbar-brand" href="{{ route('index') }}"><img alt="logo" class="logo pt-2" src="{{ asset('assets-welcome/images/logo.svg') }}" /> </a>
+            <a class="navbar-brand" href="{{ route('welcome') }}"><img alt="logo" class="logo pt-2" src="{{ asset('assets-welcome/images/logo.svg') }}" /> </a>
             <button class="mt-2 navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button"><i class="fas fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbar">
                <!--  -->
@@ -331,7 +331,7 @@ width:140px;
          <div class="container">
             <div class="row py-3 text-white">
                <div class="col-md-3 pt-3 pt-md-0">
-                  <a href="{{ route('index') }}"><img class="img-fluid" src="{{ asset('assets-welcome/images/logo.svg') }}" /></a>
+                  <a href="{{ route('welcome') }}"><img class="img-fluid" src="{{ asset('assets-welcome/images/logo.svg') }}" /></a>
                   <p class="text-copyright medium pt-2">&copy;2021, All Rights Reserved</p>
                   <div class="footer-img py-3">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</div>
                </div>
