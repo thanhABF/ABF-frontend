@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/dashboard/index');
-});
+})->name('index');
 
 Route::get('welcome', function () {
   return view('welcome');
