@@ -32,7 +32,12 @@
                                <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password "></span>
 
                            </div>
-
+                           <div class="block mt-4">
+                                <label for="remember_me" class="flex items-center">
+                                    <x-jet-checkbox id="remember_me" name="remember" />
+                                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                                </label>
+                           </div>
                            <div class="form-group">
                               <button type="submit" class="btn btn_sign">Log In</button>
 
