@@ -321,7 +321,8 @@ class CoinPilotController extends Controller
         $lastDay = Carbon::now()->format('d M Y');
         $firstDay = Carbon::now()->format('d M Y');
       }
-      $return = round($profit + $invested,2);
+      $r = $profit + $invested;
+      $return = number_format($r,2);
       $balance = Balance::where('user_id','=',auth()->user()->id)->get()->toArray()[0]['balance'];
       return view('dashboard.indext', compact('balance', 'invested', 'profit', 'return', 'amount_trades', 'profit_chart', 'date_chart', 'lastDay', 'firstDay', 'netprofitpercent_chart'));
     }
