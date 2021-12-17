@@ -261,10 +261,10 @@ class CoinPilotController extends Controller
       $quote = 'USDT';
 
       $invested = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote]])->sum('Invested');
-      $invested = number_format((float)$invested, 2, '.', ' ');
+      $invested = number_format((float)$invested, 2, '.', '');
 
       $profit = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote]])->sum('NetProfit');
-      $profit = number_format((float)$profit, 2, '.', ' ');
+      $profit = number_format((float)$profit, 2, '.', '');
 
       $amount_trades = PositionsClosed::where([['user_id','=',auth()->user()->id],['pair','LIKE','%'.$quote]])->count();
 
